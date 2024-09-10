@@ -60,17 +60,13 @@ header li, footer li {
 
 header li a, footer li a {
     transition: .3s;
+    display: inline-block;
+    padding: 10px 5px;
 }
 
 header li:hover, footer li:hover {
     color: #eb640a;
 }
-
-.shop-link {
-    width: 15px;
-    margin-left: 5px;
-}
-
 
 
 
@@ -92,7 +88,7 @@ header li:hover, footer li:hover {
     header .nav-sp {
         display: block;
     }
-    
+
     /* hmb */
     #header {
         /* background-color: red; */
@@ -167,6 +163,12 @@ header li:hover, footer li:hover {
         font-size: 25px;
         margin-bottom: 30px;
     }
+    header li:hover {
+        color: #fff;
+    }    
+    header li:active {
+        color: #fff;
+    }
     nav ul li a {
         /* background-color: greenyellow; */
         display: block;
@@ -217,10 +219,8 @@ header li:hover, footer li:hover {
         font-size: 16px;
     }
     #header nav img {
-        width: 30px;
-    }
-    #header li:hover {
-        color: #222427;
+        width: 25px;
+        margin-left: 10px;
     }
 }
 
@@ -267,7 +267,7 @@ header li:hover, footer li:hover {
     padding: 16px 40px;
     border-radius: 100px;
     font-size: 13px;
-    font-weight: 500;
+    font-weight: 700;
     transition: .3s;
     box-shadow: #eb640a 0px 3px 0px;
 }
@@ -701,7 +701,7 @@ footer img {
         position: static;
         color: #fff;
         background-color: #484c53;
-        text-align: center;
+        text-align: right;
 
 
         opacity: 1;
@@ -713,6 +713,7 @@ footer img {
         width: 50%;
     }
     footer ul {
+        display: inline-block;
         flex-direction: column;
         justify-content: space-between;
     }
@@ -728,4 +729,36 @@ footer img {
     footer li:hover {
         color: #eb640a;
     }
+    footer .shop-menu {
+        margin-right: 30px;
+    }
 }
+    .shop-menu {
+        margin-right: 20px;
+        position: relative;
+        display: inline-block;
+        width: 100%;
+    }
+    .shop-menu::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        background: url(/images/icon-link.png) no-repeat center center/contain;
+        width: 15px;
+        height: 15px;
+    }
+    .shop-menu:hover.shop-menu::after {
+        background: url(/images/icon-link-hover.png) no-repeat center center/contain;
+        margin-left: 20px;
+        transition: .3s;
+    }
+
+    footer .shop-menu::after {
+        margin-right: 0px;
+    }
+
+    footer .shop-menu {
+        padding-right: 20px;
+    }

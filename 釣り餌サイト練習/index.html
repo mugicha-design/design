@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>YKプロダクト | アキアジ用釣り餌を製造・販売</title>
-  <meta discription="アキアジ用釣り餌を製造・販売しております。">
+  <meta description="アキアジ用釣り餌を製造・販売しております。">
   <link rel="icon" href="images/favicon.ico">
 
   <!-- リセットCSS 読み込み -->
@@ -13,10 +13,6 @@
 
   <!-- style.css 読み込み -->
   <link rel="stylesheet" href="./style.css">
-
-  <!-- smoothscroll.js読み込み -->
-  <script type="text/javascript" src="common/js/smooth-scroll.js"></script>
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
@@ -38,8 +34,7 @@
           <li><a href="./service.html">Service</a></li>
           <li><a href="./works.html">Works</a></li>
           <li><a href="./contact.html">Contact</a></li>
-          <li><a href="#">Shop
-            <img src="./images/icon-link.png" onmouseover="this.src='./images/icon-link-hover.png'" onmouseout="this.src='./images/icon-link.png'" class="shop-link" alt="shopページへ移動"></a></li>
+          <li><a href="#" class="shop-menu">Shop</a></li>
         </ul>
       </nav>
 
@@ -68,7 +63,7 @@
             <li><a href="./service.html">Service</a></li>
             <li><a href="./works.html">Works</a></li>
             <li><a href="./contact.html">Contact</a></li>
-            <li><a href="#">Shop<img src="./images/icon-link.png" class="shop-link" alt="shopページへ移動"></a></li>
+            <li><a href="#">Shop<img src="./images/icon-link.png" alt="shopページへ移動"></a></li>
           </ul>
         </nav>
       </div>
@@ -196,8 +191,7 @@
           <li><a href="./service.html">Service</a></li>
           <li><a href="./works.html">Works</a></li>
           <li><a href="./contact.html">Contact</a></li>
-          <li><a href="#">Shop
-            <img src="./images/icon-link.png" onmouseover="this.src='./images/icon-link-hover.png'" onmouseout="this.src='./images/icon-link.png'" class="shop-link" alt="shopページへ移動"></a></li>
+          <li><a href="#" class="shop-menu">Shop</a></li>
         </ul>
       </nav>
     </div>
@@ -208,44 +202,7 @@
   <!-- top-button -->
   <div class="pagetop"><img src="./images/icon2.png" alt="topへ戻る"></div>
 
-  <!-- Javascript -->
-  <script>
-    // hmb実装
-    const hmbBtn = document.getElementById("hmb");
-    const header = document.getElementById("header");
-
-    hmbBtn.addEventListener("click", function() {
-      header.classList.toggle("active");
-    });
-  </script>
-
-  <script>
-    // topへ戻るボタン実装
-    // IE、Safari対応
-    // smoothscroll.js読み込み
-    // https://github.com/iamdustan/smoothscroll
-
-    // セレクタ名（.pagetop）に一致する要素を取得
-    const pagetop_btn = document.querySelector(".pagetop");
-
-    // .pagetopをクリックしたら
-    pagetop_btn.addEventListener("click", scroll_top);
-
-    // ページ上部へスムーズに移動
-    function scroll_top() {
-      window.scroll({ top: 0, behavior: "smooth" });
-    }
-
-    // スクロールされたら表示
-    window.addEventListener("scroll", scroll_event);
-    function scroll_event() {
-      if (window.pageYOffset > 100) {
-        pagetop_btn.style.opacity = "1";
-      } else if (window.pageYOffset < 100) {
-        pagetop_btn.style.opacity = "0";
-      }
-    }
-  </script>
+  <script src="js/script.js"></script>
 
 </body>
 
