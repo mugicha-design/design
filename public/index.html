@@ -24,6 +24,11 @@
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 
     <link rel="stylesheet" href="style.css">
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -34,38 +39,44 @@
         </h1>
 
         <nav>
-            <ul>
-                <li><a href="#commitment">こだわり</a></li>
-                <li><a href="#menu">お品書き</a></li>
-                <li><a href="#access">アクセス</a></li>
-                <li><a href="#reserve">ご予約</a></li>
+            <ul class="nav-ul">
+                <li class="rl"><a href="#commitment">こだわり</a></li>
+                <li class="rl"><a href="#menu">お品書き</a></li>
+                <li class="rl"><a href="#access">アクセス</a></li>
+                <li class="rl"><a href="#reserve">ご予約</a></li>
             </ul>
         </nav>    
     </header>
     <main>
-        <p>たまごと、<em>きみ</em>に溺れる時がきた。</p>
-        <figure>
+        <p class="mv-p">たまごと、<br><em><span>き</span><span>み</span></em>に溺れる<br>時がきた。</p>
+        <figure class="mv">
             <img src="images/photo-tkg.jpg" srcset="images/photo-tkg@2x.jpg 2x" width="720" height="553" decoding="async" alt="あったかいご飯に厳選したたまごをかけてネギを添えた美味しそうなたまごかけごはん">
         </figure>    
     
-        <section>
+        <section id="notice">
             <h2>お知らせ</h2>
             <dl>
-                <dt><time datetime="2022-04-02">2022.04.02</time></dt>
-                <dd><time datetime="2022-04-02">本日</time>の卵かけご飯は終了いたしました。</dd>
-                <dt><time datetime="2022-03-30">2022.03.30</time></dt>
-                <dd><time datetime="2022-03-31">明日</time>は臨時休業させて頂きます。</dd>
-                <dt><time datetime="2022-03-25">2022.03.25</time></dt>
-                <dd>Webサイトをリニューアルしました。</dd>
+                <div>
+                    <dt><time datetime="2022-04-02">2022.04.02</time></dt>
+                    <dd><time datetime="2022-04-02">本日</time>の卵かけご飯は終了いたしました。</dd>
+                </div>
+                <div>
+                    <dt><time datetime="2022-03-30">2022.03.30</time></dt>
+                    <dd><time datetime="2022-03-31">明日</time>は臨時休業させて頂きます。</dd>
+                </div>
+                <div>
+                    <dt><time datetime="2022-03-25">2022.03.25</time></dt>
+                    <dd>Webサイトをリニューアルしました。</dd>
+                </div>
             </dl>
         </section><!-- /お知らせ -->
-        <section id="commitment">
+        <section id="commitment" class="container">
             <h2>こだわり</h2>
             <p>
                 だみい屋は、架空のたまごかけご飯専門店です。たまごかけご飯に合うたまご、お米、醤油を探し続け、ついに自信を持ってご提供できるたまごかけご飯が完成しました。当店にはたまごかけご飯しかありませんが、厳選した素材のみを使った架空のたまごかけご飯がここにあります。
             </p>
         </section><!-- /こだわり -->
-        <section id="menu">
+        <section id="menu" class="container">
             <h2>お品書き</h2>
             <p>
                 3種類のたまごをご用意しています。厳選したたまごを使った架空のTKGをご賞味ください。
@@ -95,7 +106,7 @@
                 <p>¥ 800<small>（税込み）</small></p>
             </article><!-- /くうそう卵 -->
         </section><!-- /お品書き -->
-        <section id="access">
+        <section id="access" class="container">
             <h2>アクセス</h2>
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.747975777088!2d139.74285797449372!3d35.65858047259461!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bbd9009ec09%3A0x481a93f0d2a409dd!2z5p2x5Lqs44K_44Ov44O8!5e0!3m2!1sja!2sjp!4v1727845756160!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
@@ -154,7 +165,7 @@
                 </tbody>
             </table>
         </section><!-- /アクセス -->
-        <section id="reserve">
+        <section id="reserve" class="container">
             <h2>ご予約</h2>
             <p><strong>当店は完全予約制です。</strong>下記の予約フォームよりご予約の上ご来店下さい。</p>
 
