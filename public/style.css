@@ -9,17 +9,17 @@ html {
 }
 
 body {
-    /* background: #020001; */
-    background: #f72e92;
+    background: #020001;
+    /* background: #f72e92; */
     padding: 0;
-    margin: 0;
-    position: relative;
-    width: 100%;
+    margin: 0 auto;
+    max-width: 1440px;
 }
 
 /* ----------- 共通 ----------- */
 .container {
-    padding: 0 60px;
+    padding: 100px 60px 70px 60px;
+    /* background: #5b9f42; */
 }
 
 /* 縦書き文字 */
@@ -34,6 +34,15 @@ a {
     color: #fff;
     font-size: 1rem;
 }
+.title {
+    /* 3.2rem = 51.2px */
+    font-size: 3.5rem;
+    letter-spacing: 15px;
+    font-weight: bold;
+}
+strong {
+    color: #caba82;
+}
 
 /* ----------- header ----------- */
 header {
@@ -42,11 +51,12 @@ header {
     padding: 40px 60px;
     z-index: 5;
     max-width: 1440px;
+    margin: 0 auto;
 }
 
 .nav-ul a {
-    letter-spacing: 10px;
-    font-weight: bold;
+    letter-spacing: 8px;
+    font-weight: 600;
 }
 
 .nav-ul {
@@ -57,31 +67,38 @@ header {
     margin-left: 30px;
 }
 
-.nav-ul li:last-child {
-    border: 1px solid #fff;
+.nav-ul li:last-child a {
+    /* background: green; */
     padding: 15px 5px 10px 5px;
+    border: 1px solid #fff;
+}
+
+header img, footer img {
+    /* SVGのストロークの色を白に設定 */
+    filter: brightness(0) invert(1);
+    height: 90%;
 }
 
 /* ----------- mv ----------- */
 .mv {
     position: absolute;
     top: 0;
-    right: 0;
     width: 100%;
     z-index: -1;
+    max-width: 1440px;
 }
 
-figure img {
+.mv img {
     width: 100%;
     height: 100%;
 }
 
 .mv-p {
-    font-weight: 500;
+    font-weight: 600;
     font-size: 2.7rem;
-    letter-spacing: 5px;
-    margin-left: 60px;
+    margin: 100px 0 250px 60px;
     line-height: 5rem;
+    letter-spacing: 5px;
 }
 
 .mv-p em {
@@ -104,31 +121,225 @@ figure img {
 /* ----------- お知らせ ----------- */
 #notice {
     display: flex;
+    align-items: center;
     border: #7c7c7c solid 1px;
     width: 70%;
     margin: 0 auto;
-    padding: 20px 40px;
+    padding: 30px 40px;
     background: rgba(13, 5, 5, .9);
 }
 
 #notice h2 {
     color: #caba82;
-    border-right: #7c7c7c solid 1px;
     padding-right: 40px;
+    font-weight: 600;
+    font-size: 1.3rem;
+    letter-spacing: 3px;
 }
 
 #notice dl {
+    border-left: #7c7c7c solid 1px;
     padding-left: 40px;
+    width: 80%;
+    letter-spacing: 3px;
+    font-size: 0.75rem;
+    gap: 30px;
+
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#notice dl div {
+    display: flex;
+    width: 80%;
 }
 
 #notice dt {
-    width: 30%;
-    background: red;
+    width: auto;
+    /* background: red; */
 }
 
 #notice dd {
+    width: auto;
+    margin-left: 20px;
+    /* background: blue; */
+}
+
+
+/* ----------- こだわり ----------- */
+#commitment {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    margin: 0 auto;
+    width: 50%;
+}
+
+#commitment p {
+    width: 100%;
+    line-height: 2.5rem;
+    letter-spacing: 3px;
+    font-size: 0.9rem;
+    font-weight: 200;
+}
+
+#commitment h2 {
+    margin-left: 15px;
+}
+
+/* ----------- お品書き ----------- */
+#menu {
+    display: flex;
+}
+
+#menu h2 {
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+#menu div p {
+    letter-spacing: 3px;
+    font-size: 0.75rem;
+    line-height: 1.5rem;
+}
+
+#menu article {
+    margin: 50px 0 0 35px;
+    width: 50%;
+}
+
+#menu article figure img {
+    width: 100%;
+    height: 100%;
+}
+
+#menu h3 {
+    letter-spacing: 3px;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.menu-p {
+    font-size: 0.6rem;
+    margin-bottom: 15px;
+}
+
+.price {
+    font-size: 0.7rem;
+    text-align: right;
+}
+
+/* ----------- アクセス ----------- */
+#access {
+    /* padding: 100px 0 70px 0; */
+    display: flex;
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+}
+
+#access iframe {
     width: 70%;
-    background: blue;
+    height: 500px;
+}
+
+#access h2 {
+    margin-bottom: 50px;
+}
+
+#access div {
+    width: 30%;
+    margin-left: 35px;
+}
+
+#access div > p {
+    margin-bottom: 40px;
+}
+
+#access table {
+    font-size: 0.65rem;
+    letter-spacing: 0;
+}
+
+#access caption {
+    margin-bottom: 10px;
+}
+
+#access dl {
+    display: flex;
+    margin-bottom: 30px;
+    line-height: 1.5rem;
+}
+
+#access dt {
+    width: 30%;
+}
+
+#access dd {
+    width: 70%;
+}
+
+thead, tbody, tr, th, td {
+    border: #7c7c7c 1px solid;
+    text-align: center;
+    padding: 5px;
+}
+
+.none {
+    color: #7c7c7c;
+}
+
+
+/* ----------- ご予約 ----------- */
+#reserve {
+    margin: 0 auto;
+    font-size: 0.85rem;
+    letter-spacing: 3px;
+}
+
+#reserve h2, #reserve > p {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#reserve input, #reserve textarea {
+    background: #fff;
+    padding: 15px 20px;
+    border-radius: 8px;
+    width: 45%;
+    margin-left: 20px;
+}
+
+#reserve form {
+    width: 100%;
+    /* background: orange; */
+    margin: 70px auto 0;
+}
+
+#reserve form p {
+    margin-bottom: 40px;
+    /* background: red; */
+}
+
+#reserve form span {
+    font-size: 0.6rem;
+    letter-spacing: 1px;
+}
+
+#reserve .btn {
+    margin-top: 50px;
+    text-align: center;
+}
+
+#reserve .btn input {
+    background: none;
+    border: #fff 1px solid;
+    width: 150px;
+    text-align: center;
+    border-radius: 50px;
+    padding: 20px 15px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    margin: 0;
 }
