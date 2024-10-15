@@ -73,7 +73,7 @@ header {
     border: 1px solid #fff;
 }
 
-header img, footer img {
+header img {
     /* SVGのストロークの色を白に設定 */
     filter: brightness(0) invert(1);
     height: 90%;
@@ -137,22 +137,24 @@ header img, footer img {
     letter-spacing: 3px;
 }
 
-#notice dl {
+#notice div {
     border-left: #7c7c7c solid 1px;
     padding-left: 40px;
     width: 80%;
     letter-spacing: 3px;
     font-size: 0.75rem;
-    gap: 30px;
 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-#notice dl div {
+#notice dl  {
     display: flex;
-    width: 80%;
+}
+
+#notice dl:not(:last-child) {
+    margin-bottom: 30px;
 }
 
 #notice dt {
@@ -312,7 +314,8 @@ thead, tbody, tr, th, td {
 
 #reserve form {
     width: 100%;
-    /* background: orange; */
+    background: orange;
+
     margin: 70px auto 0;
 }
 
@@ -342,4 +345,62 @@ thead, tbody, tr, th, td {
     font-weight: 600;
     letter-spacing: 3px;
     margin: 0;
+}
+
+/* ----------- footer ----------- */
+footer {
+    text-align: center;
+    font-size: 0.6rem;
+    letter-spacing: 3px;
+    color: #bebebe;
+    padding: 80px 0 70px 0;
+}
+
+footer address img {
+    /* SVGのストロークの色を白に設定 */
+    filter: brightness(0) invert(1);
+    margin-bottom: 60px;
+}
+
+footer address p:nth-child(2) {
+    margin-bottom: 40px;
+    line-height: 1.2rem;
+}
+
+footer address p:nth-child(3) {
+    margin-bottom: 10px;
+    font-size: 0.7rem;
+
+}
+
+footer address p:last-child {
+    margin-bottom: 40px;
+}
+
+footer address a {
+    font-size: 2rem;
+    color: #caba82;
+    font-weight: 800;
+}
+
+footer ul {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+footer ul li:last-child {
+    margin-left: 40px;
+}
+
+footer ul li a {
+    font-size: 0.6rem;
+    letter-spacing: 3px;
+    color: #bebebe;
+    border-bottom: #7c7c7c 1px solid;
+}
+
+footer ul img {
+    width: 10px;
+    margin-left: 3px;
 }
